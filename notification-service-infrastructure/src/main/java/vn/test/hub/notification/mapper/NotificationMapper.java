@@ -3,7 +3,9 @@ package vn.test.hub.notification.mapper;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import vn.test.hub.notification.datasource.entity.NotificationEntity;
+import vn.test.hub.notification.datasource.entity.NotificationTemplateEntity;
 import vn.test.hub.notification.domain.Notification;
+import vn.test.hub.notification.domain.NotificationTemplate;
 
 import java.sql.Timestamp;
 
@@ -29,6 +31,8 @@ public interface NotificationMapper {
     @Mapping(target = "type", source = "type")
     @Mapping(target = "link", source = "link")
     @Mapping(target = "deleted", source = "deleted")
+
+    NotificationTemplate toNotificationTemplateEntity(NotificationTemplateEntity notificationTemplateEntity);
 
     NotificationEntity toEntity(Notification notification);
     default Long mapTimestampToLong(Timestamp timestamp) {
