@@ -5,5 +5,5 @@ import vn.test.hub.notification.domain.NotificationTemplate;
 import java.util.List;
 
 public interface NotificationTemplateService {
-    public List<NotificationTemplate> getAllNotificationTemplates();
+     List<NotificationTemplate> findAll();
 }

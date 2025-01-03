@@ -8,9 +8,9 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 public class NotificationTemplate {
-    private Long id;
+    private String id;
 
-    private String type;
+    private int type;
 
     private String senderId;
 
@@ -29,5 +29,7 @@ public class NotificationTemplate {
     private LocalDateTime updatedAt;
 
     private String updatedBy;
+
+
 
 }
